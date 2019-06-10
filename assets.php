@@ -92,7 +92,7 @@ define('DCR_URL', "http://habboo-a.akamaihd.net/dcr/hof_furni/");
 <ul id="console-lines">
     <?php
     ob_end_flush();
-    ob_start('mb_output_handler');
+    ob_start(); //instead of ob_start('mb_output_handler');
 
     $floor_types = [];
     $wall_types = [];
