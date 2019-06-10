@@ -131,7 +131,8 @@ define('DCR_URL', "http://habboo-a.akamaihd.net/dcr/hof_furni/");
     {
       consoleLog("Download: " . $filename);
 
-      $ctx = stream_context_create();
+      $options = array('http' => array('user_agent' => "Safari Google"));
+      $ctx = stream_context_create($options);
       stream_context_set_params($ctx, array("notification" => "stream_notification_callback"));
 
       $data = @file_get_contents($filename, false, $ctx);
