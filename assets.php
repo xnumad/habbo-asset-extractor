@@ -5,7 +5,7 @@ set_time_limit(0);
 
 define('OUTPUT_DIRECTORY', dirname(__FILE__) . '/download/');
 define('OFFICIAL_RES_URL', "https://www.habbo.com");
-define('FLASH_CLIENT_URL', "http://habboo-a.akamaihd.net/gordon/PRODUCTION-201506301513-456128588/");
+define('FLASH_CLIENT_URL', "https://images.habbo.com/gordon/PRODUCTION-201905292208-407791804/");
 define('DCR_URL', "http://habboo-a.akamaihd.net/dcr/hof_furni/");
 
 ?>
