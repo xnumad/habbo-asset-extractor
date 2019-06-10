@@ -94,7 +94,7 @@ define('DCR_URL', "http://habboo-a.akamaihd.net/dcr/hof_furni/");
     ob_end_flush();
     ob_start('mb_output_handler');
 
-    $flor_types = [];
+    $floor_types = [];
     $wall_types = [];
 
     function consoleLog($message, $prevRemove = false)
@@ -202,7 +202,7 @@ define('DCR_URL', "http://habboo-a.akamaihd.net/dcr/hof_furni/");
         $xml = file_get_contents_with_console($filename);
         $xml = simplexml_load_string($xml);
 
-        global $flor_types;
+        global $floor_types;
         global $wall_types;
 
         $count = 0;
@@ -211,7 +211,7 @@ define('DCR_URL', "http://habboo-a.akamaihd.net/dcr/hof_furni/");
             $name = $value->attributes()->classname;
             if (strpos($name, "*") === false):
                 $revision             = $value->revision;
-                $flor_types[$count++] = ['id' => $name, 'path' => DCR_URL . $revision . '/' . $name . '.swf'];
+                $floor_types[$count++] = ['id' => $name, 'path' => DCR_URL . $revision . '/' . $name . '.swf'];
             endif;
         endforeach;
 
@@ -228,11 +228,11 @@ define('DCR_URL', "http://habboo-a.akamaihd.net/dcr/hof_furni/");
 
     function DownloadAll()
     {
-        global $flor_types;
+        global $floor_types;
         global $wall_types;
 
         consoleLog("Starting RoomTypes");
-        foreach ($flor_types as $index => $value):
+        foreach ($floor_types as $index => $value):
             consoleLogBlank();
             $data      = file_get_contents_with_console($value['path']);
             $name      = $value['id'];
