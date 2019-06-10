@@ -1,7 +1,7 @@
 # habbo-asset-extractor
 PhP Script, To Extract All Habbo SWF's Assets.
 
-If your PHP instance is running on UNIX/Linux/BSD and you can't execute the *.exe files, you can install swftools here:
+If your PHP instance is running on **UNIX/Linux/BSD** and you can't execute the *.exe files, you can install swftools here:
 
 |                                 | Source                                    | Installation guide                                                |
 |---------------------------------|-------------------------------------------|-------------------------------------------------------------------|
