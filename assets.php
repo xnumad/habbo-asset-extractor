@@ -66,7 +66,7 @@ define('DCR_URL', "http://habboo-a.akamaihd.net/dcr/hof_furni/");
         var complete = false;
         var flushingData = function () {
             if (document.body) {
-                window.scrollTo(0, document.body.scrollHeight);
+                //window.scrollTo(0, document.body.scrollHeight);
                 removePreviousLine();
             }
 
