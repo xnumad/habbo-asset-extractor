@@ -294,7 +294,7 @@ define('FLASH_CLIENT_URL', "http://habboo-a.akamaihd.net/gordon/PRODUCTION-20190
     consoleLog("OUTPUT PATH           : " . OUTPUT_DIRECTORY);
     consoleLogBlank();
 
-    ExtractFigureMap(FLASH_CLIENT_URL . '/figuremap.xml');
+    ExtractFigureMap(FLASH_CLIENT_URL . 'figuremap.xml');
     DownloadAll();
 
     consoleLog("update complete.");
