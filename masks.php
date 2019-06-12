@@ -91,7 +91,7 @@ define('FLASH_CLIENT_URL', "http://habboo-a.akamaihd.net/gordon/PRODUCTION-20190
 <ul id="console-lines">
     <?php
     ob_end_flush();
-    ob_start('mb_output_handler');
+    ob_start(); //instead of ob_start('mb_output_handler');
 
     function consoleLog($message, $prevRemove = false)
     {
